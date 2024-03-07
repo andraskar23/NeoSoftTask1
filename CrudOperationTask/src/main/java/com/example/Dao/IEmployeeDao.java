@@ -5,6 +5,8 @@ import com.example.Pojo.Employees;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-public interface IEmployeeDao extends JpaRepository<Employees,Integer>{
-}
+import java.util.Optional;
 
+public interface IEmployeeDao extends JpaRepository<Employees,Integer>{
+    boolean delete(Optional<Employees> byId);
+}

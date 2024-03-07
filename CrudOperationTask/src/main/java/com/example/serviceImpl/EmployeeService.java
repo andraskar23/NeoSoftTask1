@@ -21,4 +21,9 @@ public class EmployeeService {
         return employeeDao.findAll();
     }
 
+    public boolean deleteemployee(int id) {
+
+        boolean result=employeeDao.delete(employeeDao.findById(id));
+        return result;
+    }
 }
