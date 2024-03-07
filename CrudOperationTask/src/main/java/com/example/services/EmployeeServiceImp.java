@@ -1,9 +1,8 @@
-package com.example.serviceImpl;
+package com.example.services;
 import java.util.List;
-import java.util.Optional;
 
-import com.example.Dao.IEmployeeDao;
-import com.example.Pojo.Employees;
+import com.example.repository.IEmployeeDao;
+import com.example.entity.Employees;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,11 +11,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class EmployeeService {
+public class EmployeeServiceImp implements IEmployeeService{
 
     @Autowired
     IEmployeeDao employeeDao;
 
+    @Override
     public List<Employees> findAllEmployess(){
         return employeeDao.findAll();
     }

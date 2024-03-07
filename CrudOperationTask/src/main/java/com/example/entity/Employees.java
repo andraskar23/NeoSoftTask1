@@ -1,4 +1,4 @@
-package com.example.Pojo;
+package com.example.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,19 +14,19 @@ public class Employees {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
-    @Column(name = "Emp_Id")
+    @Column(name = "empId")
     private int id;
 
-    @Column(name = "First_Name")
+    @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "Last_Name")
+    @Column(name = "lastName")
     private String lastName;
 
-    @Column(name = "Salary")
+    @Column(name = "salary")
     private Double salary;
 
-    @Column(name = "DOJ")
+    @Column(name = "doj")
     private String joiningDate;
 
 

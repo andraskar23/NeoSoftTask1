@@ -1,9 +1,8 @@
 
-package com.example.Dao;
+package com.example.repository;
 
-import com.example.Pojo.Employees;
+import com.example.entity.Employees;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 public interface IEmployeeDao extends JpaRepository<Employees,Integer>{
 }
