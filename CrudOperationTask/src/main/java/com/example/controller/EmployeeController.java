@@ -25,17 +25,7 @@ public class EmployeeController {
         return employeeService.findAllEmployess();
     }
 
-    @DeleteMapping("{/id}")
-    public ResponseEntity<?> deleteEmployee(int id){
-boolean deletedEmp=employeeService.deleteemployee(id);
 
-if(deletedEmp){
-    return  ResponseEntity.ok("Employee No "+id +"Deleted Successfully.");
-
-}
-else return ResponseEntity.ofNullable(id);
-
-    }
 
 
 }
