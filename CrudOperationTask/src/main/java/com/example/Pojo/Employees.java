@@ -7,12 +7,14 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@Table(name = "employees")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Employees {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
+    @Column(name = "Emp_Id")
     private int id;
 
     @Column(name = "First_Name")
@@ -21,11 +23,11 @@ public class Employees {
     @Column(name = "Last_Name")
     private String lastName;
 
-    @Column(name = "DOJ")
-    private String joiningDate;
-
     @Column(name = "Salary")
     private Double salary;
+
+    @Column(name = "DOJ")
+    private String joiningDate;
 
 
 }
