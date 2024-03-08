@@ -10,4 +10,6 @@ public interface IEmployeeService {
     public List<Employees> findAllEmployess();
 
     public Optional<Employees> getById(int id);
+
+    public void deleteemployee(int id);
 }
