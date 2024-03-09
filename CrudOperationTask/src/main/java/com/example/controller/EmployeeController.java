@@ -38,6 +38,11 @@ public class EmployeeController {
         return new ResponseEntity<>(emp,HttpStatus.OK);
     }
 
+    @PutMapping("/update")
+    public Employees updateEmployeeDetails(@RequestBody Employees detached ){
+        return employeeService.addEmpolyeeDetails(detached);
+    }
+
 
 
 

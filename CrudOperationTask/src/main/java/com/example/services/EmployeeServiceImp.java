@@ -28,5 +28,9 @@ public class EmployeeServiceImp implements IEmployeeService{
         return emp;
     }
 
+    public Employees addEmpolyeeDetails(Employees emp){
+        return employeeDao.save(emp);
+    }
+
 
 }
