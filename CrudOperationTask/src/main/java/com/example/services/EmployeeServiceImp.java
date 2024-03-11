@@ -1,5 +1,6 @@
 package com.example.services;
 import java.util.List;
+import java.util.Optional;
 
 import com.example.repository.IEmployeeDao;
 import com.example.entity.Employees;
@@ -24,5 +25,13 @@ public class EmployeeServiceImp implements IEmployeeService{
     public Employees createEmployee(Employees employee) {
         return employeeDao.save(employee);
     }
+
+    @Override
+    public Optional<Employees> getById(int id) {
+        Optional<Employees> emp = employeeDao.findById(id);
+        return emp;
+    }
+
+
 
 }
