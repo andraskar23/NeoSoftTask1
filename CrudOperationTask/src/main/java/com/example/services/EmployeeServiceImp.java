@@ -21,5 +21,8 @@ public class EmployeeServiceImp implements IEmployeeService{
         return employeeDao.findAll();
     }
 
+    public Employees createEmployee(Employees employee) {
+        return employeeDao.save(employee);
+    }
 
 }
