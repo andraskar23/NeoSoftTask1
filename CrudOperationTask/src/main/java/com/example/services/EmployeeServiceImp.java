@@ -22,6 +22,10 @@ public class EmployeeServiceImp implements IEmployeeService{
         return employeeDao.findAll();
     }
 
+    public Employees createEmployee(Employees employee) {
+        return employeeDao.save(employee);
+    }
+
     @Override
     public Optional<Employees> getById(int id) {
         Optional<Employees> emp = employeeDao.findById(id);
@@ -43,6 +47,7 @@ public class EmployeeServiceImp implements IEmployeeService{
 
 
     }
+
 
 
 }

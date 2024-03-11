@@ -9,7 +9,10 @@ public interface IEmployeeService {
 
     public List<Employees> findAllEmployess();
 
+    public Employees createEmployee(Employees employee);
+  
     public Optional<Employees> getById(int id);
 
-    public void deleteemployee(int id);
+    public void deleteEmployee(int id);
+
 }
