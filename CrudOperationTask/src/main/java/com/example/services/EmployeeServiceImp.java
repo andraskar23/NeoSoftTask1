@@ -22,15 +22,35 @@ public class EmployeeServiceImp implements IEmployeeService{
         return employeeDao.findAll();
     }
 
+    public Employees createEmployee(Employees employee) {
+        return employeeDao.save(employee);
+    }
+
     @Override
     public Optional<Employees> getById(int id) {
         Optional<Employees> emp = employeeDao.findById(id);
         return emp;
     }
 
+
     public Employees addEmpolyeeDetails(Employees emp){
         return employeeDao.save(emp);
     }
 
+    public void deleteemployee(int id) {
+
+//        boolean result=employeeDao.delete(employeeDao.findById(id));
+//        return result;
+//
+//          Optional<Employees> emp = getById(id);
+//
+//          return employeeDao.delete(emp);
+
+        employeeDao.deleteById(id);
+
+
+
+
+    }
 
 }
