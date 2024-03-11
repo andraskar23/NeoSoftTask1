@@ -32,6 +32,22 @@ public class EmployeeServiceImp implements IEmployeeService{
         return emp;
     }
 
+    public void deleteemployee(int id) {
+
+//        boolean result=employeeDao.delete(employeeDao.findById(id));
+//        return result;
+//
+//          Optional<Employees> emp = getById(id);
+//
+//          return employeeDao.delete(emp);
+
+        employeeDao.deleteById(id);
+
+
+
+
+    }
+
 
 
 }

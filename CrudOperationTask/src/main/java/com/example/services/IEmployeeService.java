@@ -13,4 +13,6 @@ public interface IEmployeeService {
   
     public Optional<Employees> getById(int id);
 
+    public void deleteEmployee(int id);
+
 }
