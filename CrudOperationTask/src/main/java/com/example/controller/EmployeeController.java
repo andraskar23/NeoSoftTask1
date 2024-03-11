@@ -38,7 +38,11 @@ public class EmployeeController {
         return new ResponseEntity<>(emp,HttpStatus.OK);
     }
 
-
+    @PostMapping("insertemp")
+    public ResponseEntity<Employees> createEmployee(@RequestBody Employees employee) {
+        Employees createdEmployee = employeeService.createEmployee(employee);
+        return new ResponseEntity<>(createdEmployee, HttpStatus.CREATED);
+    }
 
 
 }

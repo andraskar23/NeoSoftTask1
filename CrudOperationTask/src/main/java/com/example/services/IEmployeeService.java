@@ -9,5 +9,8 @@ public interface IEmployeeService {
 
     public List<Employees> findAllEmployess();
 
+    public Employees createEmployee(Employees employee);
+  
     public Optional<Employees> getById(int id);
+
 }
