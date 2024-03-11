@@ -38,6 +38,12 @@ public class EmployeeController {
         return new ResponseEntity<>(emp,HttpStatus.OK);
     }
 
+
+    @PutMapping("/update")
+    public Employees updateEmployeeDetails(@RequestBody Employees updateEmp ){
+        return employeeService.addEmpolyeeDetails(updateEmp);
+    }
+
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable int id){
         employeeService.deleteEmployee(id);

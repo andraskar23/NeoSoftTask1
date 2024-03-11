@@ -32,6 +32,11 @@ public class EmployeeServiceImp implements IEmployeeService{
         return emp;
     }
 
+
+    public Employees addEmpolyeeDetails(Employees emp){
+        return employeeDao.save(emp);
+    }
+
     public void deleteemployee(int id) {
 
 //        boolean result=employeeDao.delete(employeeDao.findById(id));
@@ -47,7 +52,5 @@ public class EmployeeServiceImp implements IEmployeeService{
 
 
     }
-
-
 
 }
