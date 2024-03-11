@@ -45,11 +45,11 @@ public class EmployeeController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable int id){
+    public ResponseEntity<String> deleteEmployee(@PathVariable int id) {
         employeeService.deleteEmployee(id);
-            return  ResponseEntity.ok("Employee No "+id +"Deleted Successfully.");
+        return ResponseEntity.ok("Employee No " + id + "Deleted Successfully.");
 
-
+    }
     @PostMapping("/insertEmp")
     public ResponseEntity<Employees> createEmployee(@RequestBody Employees employee) {
         Employees createdEmployee = employeeService.createEmployee(employee);
@@ -57,6 +57,6 @@ public class EmployeeController {
     }
 
 
- }
+
 
 }
